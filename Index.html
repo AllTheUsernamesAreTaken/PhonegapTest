@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript">
+		function onSuccess(acceleration) {
+    alert('Acceleration X: ' + acceleration.x + '\n' +
+          'Acceleration Y: ' + acceleration.y + '\n' +
+          'Acceleration Z: ' + acceleration.z + '\n' +
+          'Timestamp: '      + acceleration.timestamp + '\n');
+};
+
+function onError() {
+    alert('onError!');
+};
+
+navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+        </script>
+	</head>
+	
+    <body>
+    <div data-role="page" id="page1">
+		<div data-role="header">
+			<h1> NASLOV </h1>
+		</div>
+        	<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+				<li class="ui-li ui-li-static ui-btn-up-c ui-first-child"><div align="center">Hitrost</div><div align="center">12</div></li>
+				<li class="ui-li ui-li-static ui-btn-up-c"><div align="center">Pot</div><div align="center">12</div></li>
+				<li class="ui-li ui-li-static ui-btn-up-c"><div align="center">Lokacija</div><div align="center">12</div></li>
+				<li class="ui-li ui-li-static ui-btn-up-c"><div align="center">Čas</div><div align="center">12</div></li>
+				<li class="ui-li ui-li-static ui-btn-up-c ui-last-child"><div align="center">ID</div><div align="center">12</div></li>
+			</ul>
+           </div>
+	</body>
+</html>
